@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.xylophone_flutter_udemy">
    <application
-        android:label="xylophone_flutter_udemy"
+        android:label="Xylophone Flutter Udemy"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
