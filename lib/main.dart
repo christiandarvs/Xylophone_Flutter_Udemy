@@ -43,17 +43,21 @@ class Xylophone extends StatelessWidget {
 }
 
 class CustomButton extends StatelessWidget {
-  final int number;
   final int color;
-  const CustomButton({super.key, required this.number, required this.color});
+  final int number;
+  const CustomButton({super.key, required this.color, required this.number});
+
+  void playSound(int soundNumber) {
+    final player = AudioPlayer();
+    player.play(AssetSource('note$soundNumber.wav'));
+  }
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: ElevatedButton(
         onPressed: (() {
-          final player = AudioPlayer();
-          player.play(AssetSource('note$number.wav'));
+          playSound(number);
         }),
         style: ElevatedButton.styleFrom(
             backgroundColor: Color(color),
